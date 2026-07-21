@@ -1,0 +1,25 @@
+# Python compiled cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Environment & secret files
+.env
+*.env
+MONGODB_URI
+
+# VS Code files
+.vscode/
+
+# Downloaded third-party material (your rule)
+01-downloaded-material/
+
+# OS junk files
+.DS_Store
+Thumbs.db
