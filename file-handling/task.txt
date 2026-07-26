@@ -1,0 +1,20 @@
+Day 2 — File Handling
+
+Build
+
+To-do App
+
+Features:
+
+save tasks
+delete tasks
+edit tasks
+mark complete
+JSON storage
+
+You'll practice
+
+open()
+pathlib
+JSON
+exceptions

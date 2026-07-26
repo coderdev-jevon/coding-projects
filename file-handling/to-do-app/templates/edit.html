@@ -1,0 +1,10 @@
+{% extends "layout.html" %}{% block content %}
+
+    <h1>Edit to New Task</h1>
+    <form action="/edit" method="POST">
+        <input name="new_name" placeholder="New Task Name">
+        <input type="hidden" name="old_name" value="{{ old_name }}">
+        <button type="submit">SAVE CHANGES</button>
+    </form>
+
+{% endblock %}

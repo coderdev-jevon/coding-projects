@@ -1,0 +1,33 @@
+{% extends "layout.html" %}{% block content %}
+    
+    <div class="header">
+      <h1>Your Tasks</h1>
+      <a href="/api">LOOK FOR API</a>
+      <div>
+        <form action="/add" method="GET">
+          <button type="submit">Add</button>
+        </form>
+      </div>
+    </div>
+
+    {% for task in tasks %}
+    <div class="border">
+        <p>Task: {{ task["title"] }}</p>
+        <p>Completed: {{ task["completed" ]}}</p>
+        <form action="/status" method="POST">
+          <input type="hidden" name="task_name" value="{{ task["title"] }}">
+          <button type="submit" class="button-green">CHANGE STATUS</button>
+        </form>
+        <form action="/edit" method="GET">
+          <input type="hidden" name="old_name" value="{{ task["title"] }}">
+          <button type="submit" class="button-yellow">EDIT</button>
+        </form>
+        <form action="/delete" method="POST">
+          <input type="hidden" name="task_name" value="{{ task["title"] }}">
+          <button type="submit" class="button-red">DELETE</button>
+        </form>      
+    </div>
+
+    {% endfor %}
+
+{% endblock %}

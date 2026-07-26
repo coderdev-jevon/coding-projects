@@ -1,0 +1,20 @@
+Day 1 — Functions + OOP
+
+Build:
+
+Student Management System
+Library System
+Bank Account System
+
+Requirements:
+
+classes
+inheritance
+encapsulation
+methods
+exception handling
+
+No GUI.
+
+Just terminal.
+

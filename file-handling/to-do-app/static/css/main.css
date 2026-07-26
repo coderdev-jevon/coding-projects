@@ -1,0 +1,47 @@
+
+
+body {
+    text-align: center;
+    background: teal;
+
+}
+
+.border {
+    border: double;
+    border-color: black;
+    padding: 10px;
+}
+
+.button-green {
+  border: none;
+  background-color:forestgreen;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button-red {
+  border: none;
+  background-color: red;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button-yellow {
+  border: none;
+  background-color: goldenrod;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
