@@ -1,0 +1,38 @@
+[
+    {
+        "date": "2026-07-22",
+        "category": "Transport",
+        "description": "Cinema",
+        "amount": 2,
+        "cost": 50.0,
+        "total": 100.0,
+        "note": "Spiderman"
+    },
+    {
+        "date": "2026-07-23",
+        "category": "Transport",
+        "description": "Go to School",
+        "amount": 1,
+        "cost": 3.0,
+        "total": 3.0,
+        "note": ""
+    },
+    {
+        "date": "2026-07-21",
+        "category": "Food",
+        "description": "Pasta",
+        "amount": 2,
+        "cost": 4.0,
+        "total": 8.0,
+        "note": "Cheat Meal"
+    },
+    {
+        "date": "2026-07-01",
+        "category": "Food",
+        "description": "Steak",
+        "amount": 2,
+        "cost": 50.0,
+        "total": 100.0,
+        "note": "Party"
+    }
+]

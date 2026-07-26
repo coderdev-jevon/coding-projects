@@ -1,0 +1,14 @@
+{% extends "layout.html" %}{% block content %}
+{% for data in datas %}
+    <div class="box">
+        <p>Date: {{ data["date"] }} </p>
+        <p>Category: {{ data["category"]}} </p>
+        <p>Description: {{ data["description"]}} </p>
+        <p>Amount: {{ data["amount"]}} </p>
+        <p>Cost Each: ${{ data["cost"]}} </p>
+        <p>Cost Total: ${{ data["total"] }} </p>
+        <p>Note: {{ data["note"]}} </p>
+    </div>
+{% endfor %}
+
+{% endblock %}

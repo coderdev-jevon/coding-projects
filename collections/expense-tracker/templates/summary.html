@@ -1,0 +1,11 @@
+{% extends "layout.html" %}{% block content %}
+<div>
+    <h1>This Month Expense: ${{ this_month_expense }}</h1>
+    <h3>Total Per Categories Spending</h3>
+    {% for key,value in per_category_expense.items() %}
+        <div>
+            <p>{{ key }}: ${{ value }}, {{ count[key] }} spending(s)</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
