@@ -34,5 +34,14 @@
         "cost": 50.0,
         "total": 100.0,
         "note": "Party"
+    },
+    {
+        "amount": 1,
+        "cost": 50.0,
+        "date": "2026-07-01",
+        "category": "Transport",
+        "description": "Mall",
+        "total": 50.0,
+        "note": "Party"
     }
 ]

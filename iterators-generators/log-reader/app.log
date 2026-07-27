@@ -1,0 +1,5 @@
+2026-07-27 08:30 INFO: Application started
+2026-07-27 08:35 WARNING: Low disk space
+2026-07-27 09:02 ERROR: Cannot save expense data
+2026-07-27 09:10 INFO: New expense record added
+2026-07-27 09:45 ERROR: Database connection timeout

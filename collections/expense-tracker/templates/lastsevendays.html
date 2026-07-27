@@ -1,7 +1,9 @@
-{% extends "layout.html" %}{% block content %}
+{% extends "layout.html" %} {% block content %}
+
 <div>
     <a class="topright" href="/lastsevendays">Last 7 Days</a>
 </div>
+
 {% for data in datas %}
     <div class="box">
         <p>Date: {{ data["date"] }} </p>

@@ -20,7 +20,7 @@ main {
     margin: 20px;
 }
 
-a {
+.text-link {
     font-size: 20px;
     color: black;
     font-weight: bold;
@@ -34,4 +34,11 @@ a {
     max-width: 600px;
     width: 100%;
     margin: 30px auto;
+}
+
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 20px;
 }
