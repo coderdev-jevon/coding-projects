@@ -1,0 +1,10 @@
+{% extends "layout.html" %}{% block content %}
+    <a href="/{{ back_path }}">Go Back</a>
+    <br>
+    {{ content_html | safe }}
+
+    <form method="POST">
+        <textarea name="text_content" style="width:100%;height:200px" required></textarea>
+        <button type="submit">Save Changes</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}{% block content %}
+    <div>
+        <form method="POST">
+            {% if type == "file" %}
+                <input name="name" placeholder="Enter New File Name" required>
+            {% elif type == "folder" %}
+                <input name="name" placeholder="Enter New Folder Name" required>
+            {% endif %}
+            <input type="hidden" name="type" value="{{ type }}">
+            <button type="submit">Confirm Changes</button>
+        </form>
+    </div>
+{% endblock %}

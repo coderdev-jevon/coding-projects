@@ -1,0 +1,30 @@
+{% extends "layout.html" %}{% block content %}
+    <h1>/{{ sub_path}}</h1>
+    <a href="/{{ back_path }}">Go Back</a>
+    <form action="/createfile/{{ sub_path }}" method="GET">
+        <button type="submit">Create new file</button>
+    </form>
+    <form action="/createfolder/{{ sub_path }}" method="GET">
+        <button type="submit">Create new folder</button>
+    </form>
+    <div>
+        {% for folder in folders %}
+            <a href="/{{ sub_path }}/{{ folder }}">{{ folder }}  -  folder</p>
+            <form action="/delete/{{ sub_path }}/{{ folder }}">
+                <button type="submit">Delete</button>
+            </form>
+            <form action="/edit/{{ sub_path }}/{{ folder }}">
+                <button type="edit">Edit</button>
+            </form>
+        {% endfor %}
+        {% for file in files %}
+            <a href ="/view/{{ sub_path }}/{{ file }}">{{ file }}  -  file</a>
+            <form action="/delete/{{ sub_path }}/{{ file }}">
+                <button type="submit">Delete</button>
+            </form>
+            <form action="/edit/{{ sub_path }}/{{ file }}">
+                <button type="edit">Edit</button>
+            </form>
+        {% endfor %}
+    </div>
+{% endblock%}
