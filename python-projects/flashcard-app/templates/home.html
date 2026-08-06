@@ -1,0 +1,21 @@
+{% extends "layout.html" %}{% block content %}
+<div class="app-space">
+    <div class="nav">
+        <h1>Decks</h1>
+        <div class="navlinks">
+            <a href="/add-deck">Add New Deck</a>
+        </div>
+    </div>
+    <div class="list">
+        {% for name in deck_names %}
+        <div class="item">
+            <a href="/{{ name }}">{{ name }}</a>
+            <form action="/delete-deck" method="POST">
+                <input type="hidden" name="name" value="{{ name }}">
+                <button type="submit">Delete Deck</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

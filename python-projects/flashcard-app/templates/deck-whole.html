@@ -1,0 +1,22 @@
+{% extends "layout.html" %}{% block content %}
+<div class="open">
+    <div class="nav">
+        <h1>{{ deck_name }}</h1>
+        <div class="nav-links">
+            <a href="/{{ deck_name }}">Return</a>
+        </div>
+    </div>
+    {% for card in cards %}
+    <div class="card">
+        <p>{{ card.front.replace("\n", "<br>") | safe }}</p>
+        <p>{{ card.back.replace("\n", "<br>") | safe }}</p>
+        <p>Mastered: {{ card.mastered }}</p>
+        <form action="/change-status" method="POST">
+            <input type="hidden" name="deck_name" value="{{ deck_name }}">
+            <input type="hidden" name="id" value="{{ card.id }}">
+            <button type="submit">Change Mastered Status</button>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

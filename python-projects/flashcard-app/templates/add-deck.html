@@ -1,0 +1,14 @@
+{% extends "layout.html" %}{% block content %}
+<div class="app-space">
+    <div class="nav">
+        <h1>Add Deck</h1>
+        <div class="nav-links">
+            <a href="/">Return</a>
+        </div>
+    </div>  
+    <form method="POST">
+        <input name="name" placeholder="Input Deck Name">
+        <button type="submit">Add</button>
+    </form>
+</div>
+{% endblock %}

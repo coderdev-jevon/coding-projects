@@ -1,0 +1,15 @@
+{% extends "layout.html" %}{% block content %}
+<div class="app-space">
+    <div class="nav">
+        <h1>{{ deck_name }}</h1>
+        <div class="nav-links">
+            <a href="/{{ deck_name }}">Return</a>
+        </div>
+    </div>
+    <form method="POST">
+        <textarea name="front" rows="5" cols="50">Front Page</textarea>
+        <textarea name="back" rows="15" cols="50">Back Page</textarea>
+        <button type="submit">Add Card</button>
+    </form>
+</div>
+{% endblock %}

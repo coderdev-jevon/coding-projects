@@ -1,0 +1,63 @@
+{
+  "mandarin": [
+    {
+      "id": 2,
+      "date_created": "2026-08-05",
+      "front": "2",
+      "back": "Back Page",
+      "mastered": true,
+      "last_reviewed": "2026-08-05"
+    },
+    {
+      "id": 3,
+      "date_created": "2026-08-05",
+      "front": "1",
+      "back": "Back Page",
+      "mastered": false,
+      "last_reviewed": "2026-08-06"
+    },
+    {
+      "id": 4,
+      "date_created": "2026-08-05",
+      "front": "3",
+      "back": "Back Page",
+      "mastered": false,
+      "last_reviewed": "2026-08-06"
+    },
+    {
+      "id": 5,
+      "date_created": "2026-08-06",
+      "front": "储存",
+      "back": "你喜欢储存什么？",
+      "mastered": true,
+      "last_reviewed": null
+    }
+  ],
+  "coding": [
+    {
+      "id": 1,
+      "date_created": "2026-08-05",
+      "front": "1",
+      "back": "Back Page",
+      "mastered": true,
+      "last_reviewed": null
+    },
+    {
+      "id": 2,
+      "date_created": "2026-08-06",
+      "front": "2",
+      "back": "Back Page",
+      "mastered": false,
+      "last_reviewed": "2026-08-06"
+    },
+    {
+      "id": 3,
+      "date_created": "2026-08-06",
+      "front": "3",
+      "back": "Back Page",
+      "mastered": true,
+      "last_reviewed": null
+    }
+  ],
+  "chemistry": []
+}

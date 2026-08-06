@@ -1,0 +1,26 @@
+{% extends "layout.html" %}{% block content %}
+
+<div class="card">
+    <p class="item">{{ card.front.replace("\n", "<br>") | safe }}</p>
+    {% if is_revealed == False %}
+        <form method="POST">
+            <input type="hidden" name="action" value="reveal">
+            <input type="hidden" name="id" value="{{ card.id }}">
+            <button type="submit">Reveal</button>
+        </form>
+    {% elif is_revealed == True %}
+        <p class="item">{{ card.back.replace("\n", "<br>") | safe }}</p>
+        <form method="POST">
+            <input type="hidden" name="action" value="easy">
+            <input type="hidden" name="id" value="{{ card.id }}">
+            <button>Easy</button>
+        </form>
+        <form method="POST">
+            <input type="hidden" name="action" value="hard">
+            <input type="hidden" name="id" value="{{ card.id }}">
+            <button>Hard</button>
+        </form>
+    {% endif %}
+</div>
+
+{% endblock %}

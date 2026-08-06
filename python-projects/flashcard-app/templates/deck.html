@@ -1,0 +1,24 @@
+{% extends "layout.html" %}{% block content %}
+    <div class="app-space">
+        <div class="nav">
+            <h1>{{ deck_name }}</h1>
+            <div class="nav-links">
+                <a href="/{{ deck_name }}/add-card">Add New Card</a>
+                <a href="/{{ deck_name }}/all-cards">Look All Cards</a>
+                <a href="/{{ deck_name }}/review">Review Cards</a>
+                <a href="/">Return</a>
+            </div>
+        </div>
+        {% for card in cards %}
+        <div class="card">
+            <p class="item">{{ card.front.replace("\n", "<br>") | safe }}</p>
+            <p class="item">{{ card.back.replace("\n", "<br>") | safe }}</p>
+            <form action="/delete-card" method="POST">
+                <input type="hidden" name="id" value="{{ card["id"] }}">
+                <input type="hidden" name="deck_name" value="{{ deck_name }}"> 
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

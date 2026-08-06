@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for("static", filename="css/main.css")}}">
+        <title>Expense Tracker</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <h1>Spendings</h1>
+                <p>Total Spending: ${{ total }}, Average Spending: ${{ mean }}</p>
+                {% for row in rows %}
+                    <div class="cube">
+                        <div>
+                            <p>Date: {{ row.date }}</p>
+                            <p>Category: {{ row.category }}</p>
+                            <p>Description: {{ row.description }}</p>
+                            <p>Amount: ${{ row.amount }}</p>
+                            <p>Payment Method: {{ row.payment }}</p>
+                        </div>
+                        <form action="/delete" method="POST">
+                            <input type="hidden" name="index" value="{{ row.Index }}">
+                            <button type="submit">DELETE</button>
+                        </form>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="box">
+                <form method="POST" class="form">
+                    <h1>Add New Expense Record</h1>
+                    <label>Date</label>
+                    <input type="date" name="date" required>
+                    <label>Category</label>
+                    <select name="category">
+                        <option value="food">Food</option>
+                        <option value="transport">Transport</option>
+                        <option value="utility">Utility</option>
+                        <option value="shopping">Shopping</option>
+                        <option value="health">Health</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="education">Education</option>
+                        <option value="others" selected>Others</option>
+                    </select>
+                    <label>Description</label>
+                    <input name="description" required>
+                    <label>Amount ($)</label>
+                    <input name="amount" required>
+                    <label>Payment Method</label>
+                    <select name="payment">
+                        <option value="cash">Cash</option>
+                        <option value="debit">Debit Card</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="e-wallet">E-wallet</option>
+                        <option value="others">Others</option>
+                    </select>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+
+</html>
